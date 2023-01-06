@@ -23,7 +23,7 @@ const app = express();
 app.use(morgan('tiny'));
 
 // Ajout du Routing
-app.use(router);
+app.use('/api', router);
 
 // Demarrage de la Web API
 app.listen(process.env.PORT, () => {
