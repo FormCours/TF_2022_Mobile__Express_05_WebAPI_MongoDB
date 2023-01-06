@@ -3,21 +3,23 @@
 // Chargement des variables d'environnement
 require('dotenv').config();
 
-// Import
+// Import d'express et d'un package qui permet de gérer les errors async/await 
 const express = require('express');
+require('express-async-errors');
+
+// Import divers
 const chalk = require('chalk');
 const router = require('./routers/router');
 const morgan = require('morgan');
 const database = require('./database');
-
-// Package qui permet de gérer les errors async/await dans express
-require('express-async-error');
 
 // Connection à la base de donnée MongoDB
 database();
 
 // Creation de la Web API
 const app = express();
+
+
 
 // Utilisation du logger « morgan »
 app.use(morgan('tiny'));
