@@ -22,6 +22,9 @@ const app = express();
 // Utilisation du logger « morgan »
 app.use(morgan('tiny'));
 
+// Middleware pour activé le traitement des données "application/json"
+app.use(express.json());
+
 // Ajout du Routing
 app.use('/api', router);
 
