@@ -21,6 +21,8 @@ Projet :
 - dotenv
 - morgan
 - chalk
+- express-async-error
+- mongoose
 
 Outils de dev :
 - nodemon 

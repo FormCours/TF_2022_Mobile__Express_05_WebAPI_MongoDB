@@ -8,6 +8,13 @@ const express = require('express');
 const chalk = require('chalk');
 const router = require('./routers/router');
 const morgan = require('morgan');
+const database = require('./database');
+
+// Package qui permet de gérer les errors async/await dans express
+require('express-async-error');
+
+// Connection à la base de donnée MongoDB
+database();
 
 // Creation de la Web API
 const app = express();
